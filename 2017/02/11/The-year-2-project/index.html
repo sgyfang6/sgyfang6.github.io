@@ -1,0 +1,836 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="project," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="This blog is used to introduce the process of the year two project. The project is “Robot for remote monitoring”.
+Introduction
+The project is about robot for remote monitoring, simply speaking is a ve">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The year 2 project">
+<meta property="og:url" content="http://sgyfang6.github.io/2017/02/11/The-year-2-project/index.html">
+<meta property="og:site_name" content="Year2Project">
+<meta property="og:description" content="This blog is used to introduce the process of the year two project. The project is “Robot for remote monitoring”.
+Introduction
+The project is about robot for remote monitoring, simply speaking is a ve">
+<meta property="og:image" content="http://sgyfang6.github.io/car1.JPG">
+<meta property="og:image" content="http://sgyfang6.github.io/car2.JPG">
+<meta property="og:image" content="http://sgyfang6.github.io/createblog.PNG">
+<meta property="og:image" content="http://sgyfang6.github.io/DHT11BACK.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/DHT11FRONT.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/SDBACK.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/SDFRONT.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/SD+DHT11.PNG">
+<meta property="og:image" content="http://sgyfang6.github.io/BTBACK.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/BTFRONT.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/SD+DHT112.png">
+<meta property="og:image" content="http://sgyfang6.github.io/TGS813FRONT.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/TGS813BACK.jpg">
+<meta property="og:image" content="http://sgyfang6.github.io/TGS813CIRCUIT.PNG">
+<meta property="og:updated_time" content="2017-03-09T21:58:36.615Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The year 2 project">
+<meta name="twitter:description" content="This blog is used to introduce the process of the year two project. The project is “Robot for remote monitoring”.
+Introduction
+The project is about robot for remote monitoring, simply speaking is a ve">
+<meta name="twitter:image" content="http://sgyfang6.github.io/car1.JPG">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sgyfang6.github.io/2017/02/11/The-year-2-project/"/>
+
+
+
+
+
+  <title> The year 2 project | Year2Project </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Year2Project</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+    
+      <p class="site-subtitle">Yan</p>
+    
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://sgyfang6.github.io/2017/02/11/The-year-2-project/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Yan Fang">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="http://eeeconference.com/img/logo.svg">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Year2Project">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="Year2Project" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                The year 2 project
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-10T17:28:01Z">
+                2017-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                  
+                    <span class="post-meta-item-text">Words count in article</span>
+                  
+                    <span title="Words count in article" }}">
+                      2,675
+                    </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>This blog is used to introduce the process of the year two project. The project is “Robot for remote monitoring”.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
+<li>The project is about robot for remote monitoring, simply speaking is a vehicle with a weather station on it. And the robot can send the weather station to the specific place to do the measurement and collect the data then go back with the data.</li>
+</ul>
+<h2 id="First-week"><a href="#First-week" class="headerlink" title="First week"></a>First week</h2><ul>
+<li><h3 id="Week’s-activities"><a href="#Week’s-activities" class="headerlink" title="Week’s activities"></a>Week’s activities</h3><ul>
+<li><p>Assemble the new smart car<br><img src="/car1.JPG" alt="car1"><img src="/car2.JPG" alt="car2"></p>
+</li>
+<li><p>Write a Arduino program and find the example programs for mBot to test the vehicle</p>
+</li>
+</ul>
+</li>
+<li><h3 id="Problem-issues-and-concerns"><a href="#Problem-issues-and-concerns" class="headerlink" title="Problem, issues and concerns"></a>Problem, issues and concerns</h3><ul>
+<li>How to collect the data and store?</li>
+<li>Transmission methods</li>
+</ul>
+</li>
+<li><h3 id="Tasks-for-next-week"><a href="#Tasks-for-next-week" class="headerlink" title="Tasks for next week"></a>Tasks for next week</h3><ul>
+<li>Data collecting methods and storing methods</li>
+<li>Transmission methods    </li>
+</ul>
+</li>
+</ul>
+<h2 id="Second-week"><a href="#Second-week" class="headerlink" title="Second week"></a>Second week</h2><ul>
+<li><h3 id="Week’s-activities-1"><a href="#Week’s-activities-1" class="headerlink" title="Week’s activities"></a>Week’s activities</h3><ul>
+<li><p>Looking for the method for the measurement </p>
+<ul>
+<li>Using the Arduino UNO board for the base of the weather station.</li>
+<li>Using the sensor DHT11 for the temperature and humidity measurement. </li>
+<li>Using the sensor TSG813 for the measurement of the methane($CH_4$)</li>
+<li>Using SD card to store all the data measured by the sensor </li>
+</ul>
+</li>
+<li><p>Create the website for the blog</p>
+<ul>
+<li>Website:<a href="https://sgyfang6.github.io/2017/02/10/The-year-2-project/" title="The-year-2-project">The-year-2-project</a><br><img src="/createblog.PNG" alt="create blog"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="Problem-issues-and-concerns-1"><a href="#Problem-issues-and-concerns-1" class="headerlink" title="Problem, issues and concerns"></a>Problem, issues and concerns</h3><ul>
+<li>Where should the blog be written at and what’s the format for blog?</li>
+<li>lacking for sensor and how to program them in the Arduino.</li>
+<li>Learning about the sensor DHT11 and TGS813, different units of the temperature measurement and the other concept of the humidity measurement such as dew point. </li>
+</ul>
+</li>
+<li><h3 id="Tasks-for-next-week-1"><a href="#Tasks-for-next-week-1" class="headerlink" title="Tasks for next week"></a>Tasks for next week</h3><ul>
+<li>Sensor connection with embedded system</li>
+<li>Data collection and synchronization of robot with sensor system</li>
+</ul>
+</li>
+</ul>
+<h2 id="Third-week"><a href="#Third-week" class="headerlink" title="Third week"></a>Third week</h2><ul>
+<li><h3 id="Week’s-activities-2"><a href="#Week’s-activities-2" class="headerlink" title="Week’s activities"></a>Week’s activities</h3><ul>
+<li>Connect the dht11 sensor and the microSD card module with the Arduino UNO board<br><img src="/DHT11BACK.jpg" height="400" width="200" align="left"><br><img src="/DHT11FRONT.jpg" height="300" width="185" align="left"><br><img src="/SDBACK.jpg" height="400" width="300" align="left"><br><img src="/SDFRONT.jpg" height="200" width="255" align="left"><br><img src="/SD+DHT11.PNG" alt="SD+DHT11"></li>
+<li>Program the Arduino UNO board to see the data collected by the sensor and verify the SD module.</li>
+<li>The introduction of the dht11 module can be find on the Arduino official website, and the program can also be found on the <a href="http://playground.arduino.cc/Main/DHT11Lib" title="DHT11Lib" target="_blank" rel="external">website</a>. <h4 id="Project-code-of-DHT11"><a href="#Project-code-of-DHT11" class="headerlink" title="Project code of DHT11"></a>Project code of DHT11</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Fahrenheit</span><span class="params">(<span class="keyword">double</span> celsius)</span> </span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1.8</span> * celsius + <span class="number">32</span>;</div><div class="line">&#125;  </div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Kelvin</span><span class="params">(<span class="keyword">double</span> celsius)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> celsius + <span class="number">273.15</span>;</div><div class="line">&#125;    </div><div class="line"> </div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dewPoint</span><span class="params">(<span class="keyword">double</span> celsius, <span class="keyword">double</span> humidity)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">double</span> A0= <span class="number">373.15</span>/(<span class="number">273.15</span> + celsius);</div><div class="line">        <span class="keyword">double</span> SUM = <span class="number">-7.90298</span> * (A0<span class="number">-1</span>);</div><div class="line">        SUM += <span class="number">5.02808</span> * <span class="built_in">log10</span>(A0);</div><div class="line">        SUM += <span class="number">-1.3816e-7</span> * (<span class="built_in">pow</span>(<span class="number">10</span>, (<span class="number">11.344</span>*(<span class="number">1</span><span class="number">-1</span>/A0)))<span class="number">-1</span>) ;</div><div class="line">        SUM += <span class="number">8.1328e-3</span> * (<span class="built_in">pow</span>(<span class="number">10</span>,(<span class="number">-3.49149</span>*(A0<span class="number">-1</span>)))<span class="number">-1</span>) ;</div><div class="line">        SUM += <span class="built_in">log10</span>(<span class="number">1013.246</span>);</div><div class="line">        <span class="keyword">double</span> VP = <span class="built_in">pow</span>(<span class="number">10</span>, SUM<span class="number">-3</span>) * humidity;</div><div class="line">        <span class="keyword">double</span> T = <span class="built_in">log</span>(VP/<span class="number">0.61078</span>);   <span class="comment">// temp var</span></div><div class="line">        <span class="keyword">return</span> (<span class="number">241.88</span> * T) / (<span class="number">17.558</span>-T);</div><div class="line">&#125;</div><div class="line"> </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dewPointFast</span><span class="params">(<span class="keyword">double</span> celsius, <span class="keyword">double</span> humidity)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">double</span> a = <span class="number">17.271</span>;</div><div class="line">        <span class="keyword">double</span> b = <span class="number">237.7</span>;</div><div class="line">        <span class="keyword">double</span> temp = (a * celsius) / (b + celsius) + <span class="built_in">log</span>(humidity/<span class="number">100</span>);</div><div class="line">        <span class="keyword">double</span> Td = (b * temp) / (a - temp);</div><div class="line">        <span class="keyword">return</span> Td;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dht11.h&gt;</span></span></div><div class="line"> </div><div class="line">dht11 DHT11;</div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> DHT11PIN 2</span></div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  Serial.begin(<span class="number">9600</span>);</div><div class="line">  Serial.println(<span class="string">"DHT11 TEST PROGRAM "</span>);</div><div class="line">  Serial.print(<span class="string">"LIBRARY VERSION: "</span>);</div><div class="line">  Serial.println(DHT11LIB_VERSION);</div><div class="line">  Serial.println();</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  Serial.println(<span class="string">"\n"</span>);</div><div class="line"> </div><div class="line">  <span class="keyword">int</span> chk = DHT11.read(DHT11PIN);</div><div class="line"> </div><div class="line">  Serial.print(<span class="string">"Read sensor: "</span>);</div><div class="line">  <span class="keyword">switch</span> (chk)</div><div class="line">  &#123;</div><div class="line">    <span class="keyword">case</span> DHTLIB_OK: </div><div class="line">                Serial.println(<span class="string">"OK"</span>); </div><div class="line">                <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> DHTLIB_ERROR_CHECKSUM: </div><div class="line">                Serial.println(<span class="string">"Checksum error"</span>); </div><div class="line">                <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> DHTLIB_ERROR_TIMEOUT: </div><div class="line">                Serial.println(<span class="string">"Time out error"</span>); </div><div class="line">                <span class="keyword">break</span>;</div><div class="line">    <span class="keyword">default</span>: </div><div class="line">                Serial.println(<span class="string">"Unknown error"</span>); </div><div class="line">                <span class="keyword">break</span>;</div><div class="line">  &#125;</div><div class="line"> </div><div class="line">  Serial.print(<span class="string">"Humidity (%): "</span>);</div><div class="line">  Serial.println((<span class="keyword">float</span>)DHT11.humidity, <span class="number">2</span>);</div><div class="line"> </div><div class="line">  Serial.print(<span class="string">"Temperature (oC): "</span>);</div><div class="line">  Serial.println((<span class="keyword">float</span>)DHT11.temperature, <span class="number">2</span>);</div><div class="line"> </div><div class="line">  Serial.print(<span class="string">"Temperature (oF): "</span>);</div><div class="line">  Serial.println(Fahrenheit(DHT11.temperature), <span class="number">2</span>);</div><div class="line"> </div><div class="line">  Serial.print(<span class="string">"Temperature (K): "</span>);</div><div class="line">  Serial.println(Kelvin(DHT11.temperature), <span class="number">2</span>);</div><div class="line"> </div><div class="line">  Serial.print(<span class="string">"Dew Point (oC): "</span>);</div><div class="line">  Serial.println(dewPoint(DHT11.temperature, DHT11.humidity));</div><div class="line"> </div><div class="line">  Serial.print(<span class="string">"Dew PointFast (oC): "</span>);</div><div class="line">  Serial.println(dewPointFast(DHT11.temperature, DHT11.humidity));</div><div class="line"> </div><div class="line">  delay(<span class="number">2000</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p>Reference: <a href="http://playground.arduino.cc/Main/DHT11Lib" target="_blank" rel="external">http://playground.arduino.cc/Main/DHT11Lib</a><br>Then some new conceptions came out when looking at the explanation of the dht11 program, such as dewpoint() and dewpointfast, which need further study with the given website.<br>    <a href="http://wahiduddin.net/calc/density_algorithms.htm" target="_blank" rel="external">http://wahiduddin.net/calc/density_algorithms.htm</a><br>    <a href="http://en.wikipedia.org/wiki/Dew_point" target="_blank" rel="external">http://en.wikipedia.org/wiki/Dew_point</a><br>  <a href="http://www.colorado.edu/geography/weather_station/Geog_site/about.htm" target="_blank" rel="external">http://www.colorado.edu/geography/weather_station/Geog_site/about.htm</a></p>
+<h4 id="Project-code-for-testing-the-MicroSD-Card-Module"><a href="#Project-code-for-testing-the-MicroSD-Card-Module" class="headerlink" title="Project code for testing the MicroSD Card Module"></a>Project code for testing the MicroSD Card Module</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SPI.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SD.h&gt;</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> chipSelect = <span class="number">4</span>;</div><div class="line"><span class="keyword">int</span> a=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  Serial.begin(<span class="number">9600</span>);  </div><div class="line">  Serial.print(<span class="string">"Initializing SD card..."</span>);</div><div class="line">  pinMode(<span class="number">10</span>, OUTPUT);</div><div class="line">  </div><div class="line">  </div><div class="line">  <span class="keyword">if</span> (!SD.begin(chipSelect)) &#123;  </div><div class="line">    Serial.println(<span class="string">"Card failed, or not present"</span>);</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  Serial.println(<span class="string">"card initialized."</span>);  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  </div><div class="line">  String dataString = <span class="string">""</span>;</div><div class="line"></div><div class="line">  </div><div class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> analogPin = <span class="number">0</span>; analogPin &lt; <span class="number">3</span>; analogPin++) &#123;</div><div class="line">    <span class="keyword">int</span> sensor = analogRead(analogPin);</div><div class="line">    dataString += String(sensor);</div><div class="line">    <span class="keyword">if</span> (analogPin &lt; <span class="number">2</span>) &#123;</div><div class="line">      dataString += <span class="string">","</span>; </div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  File dataFile = SD.open(<span class="string">"datalog.txt"</span>, FILE_WRITE);  </div><div class="line"></div><div class="line"> </div><div class="line">  <span class="keyword">if</span> (dataFile) </div><div class="line">  &#123;</div><div class="line">    dataFile.println(dataString);</div><div class="line">    dataFile.close();</div><div class="line">   </div><div class="line">    Serial.println(dataString);</div><div class="line">  &#125;  </div><div class="line">  <span class="keyword">else</span> </div><div class="line">  &#123;</div><div class="line">    Serial.println(<span class="string">"error opening datalog.txt"</span>);</div><div class="line">  &#125; </div><div class="line"> </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="Project-code-for-storing-the-data-measured-by-DHT11"><a href="#Project-code-for-storing-the-data-measured-by-DHT11" class="headerlink" title="Project code for storing the data measured by DHT11"></a>Project code for storing the data measured by DHT11</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dht11.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SPI.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SD.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> chipSelect = <span class="number">4</span>;</div><div class="line">dht11 DHT11;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> DHT11PIN 2</span></div><div class="line"><span class="keyword">int</span> a=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Fahrenheit</span><span class="params">(<span class="keyword">double</span> celsius)</span> </span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1.8</span> * celsius + <span class="number">32</span>;</div><div class="line">&#125;    </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Kelvin</span><span class="params">(<span class="keyword">double</span> celsius)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> celsius + <span class="number">273.15</span>;</div><div class="line">&#125;     </div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dewPoint</span><span class="params">(<span class="keyword">double</span> celsius, <span class="keyword">double</span> humidity)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">double</span> A0= <span class="number">373.15</span>/(<span class="number">273.15</span> + celsius);</div><div class="line">        <span class="keyword">double</span> SUM = <span class="number">-7.90298</span> * (A0<span class="number">-1</span>);</div><div class="line">        SUM += <span class="number">5.02808</span> * <span class="built_in">log10</span>(A0);</div><div class="line">        SUM += <span class="number">-1.3816e-7</span> * (<span class="built_in">pow</span>(<span class="number">10</span>, (<span class="number">11.344</span>*(<span class="number">1</span><span class="number">-1</span>/A0)))<span class="number">-1</span>) ;</div><div class="line">        SUM += <span class="number">8.1328e-3</span> * (<span class="built_in">pow</span>(<span class="number">10</span>,(<span class="number">-3.49149</span>*(A0<span class="number">-1</span>)))<span class="number">-1</span>) ;</div><div class="line">        SUM += <span class="built_in">log10</span>(<span class="number">1013.246</span>);</div><div class="line">        <span class="keyword">double</span> VP = <span class="built_in">pow</span>(<span class="number">10</span>, SUM<span class="number">-3</span>) * humidity;</div><div class="line">        <span class="keyword">double</span> T = <span class="built_in">log</span>(VP/<span class="number">0.61078</span>);   <span class="comment">// temp var</span></div><div class="line">        <span class="keyword">return</span> (<span class="number">241.88</span> * T) / (<span class="number">17.558</span>-T);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dewPointFast</span><span class="params">(<span class="keyword">double</span> celsius, <span class="keyword">double</span> humidity)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">double</span> a = <span class="number">17.271</span>;</div><div class="line">        <span class="keyword">double</span> b = <span class="number">237.7</span>;</div><div class="line">        <span class="keyword">double</span> temp = (a * celsius) / (b + celsius) + <span class="built_in">log</span>(humidity/<span class="number">100</span>);</div><div class="line">        <span class="keyword">double</span> Td = (b * temp) / (a - temp);</div><div class="line">        <span class="keyword">return</span> Td;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  Serial.begin(<span class="number">9600</span>);  </div><div class="line">  Serial.print(<span class="string">"Initializing SD card..."</span>);</div><div class="line">  pinMode(<span class="number">10</span>, OUTPUT); </div><div class="line">  <span class="keyword">if</span> (!SD.begin(chipSelect)) &#123;  </div><div class="line">    Serial.println(<span class="string">"Card failed, or not present"</span>);</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  Serial.println(<span class="string">"card initialized."</span>);  </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  File dataFile = SD.open(<span class="string">"datalog.txt"</span>, FILE_WRITE);       </div><div class="line">  <span class="keyword">int</span> chk = DHT11.read(DHT11PIN);</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (dataFile) </div><div class="line">  &#123;</div><div class="line">    <span class="keyword">float</span> T=millis()/<span class="number">1000.0</span>;</div><div class="line">    dataFile.print(<span class="string">"Time: "</span>); </div><div class="line">    dataFile.print(T);</div><div class="line">    dataFile.println(<span class="string">"ms"</span>);</div><div class="line">    Serial.print(<span class="string">"Time: "</span>);</div><div class="line">    Serial.print(T);</div><div class="line">    Serial.println(<span class="string">"ms"</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Humidity (%): "</span>);</div><div class="line">    dataFile.println((<span class="keyword">float</span>)DHT11.humidity, <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Humidity (%): "</span>);</div><div class="line">    Serial.println((<span class="keyword">float</span>)DHT11.humidity, <span class="number">2</span>);</div><div class="line"></div><div class="line">    dataFile.println(<span class="string">"Temperature (oC): "</span>);</div><div class="line">    dataFile.println((<span class="keyword">float</span>)DHT11.temperature, <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Temperature (oC): "</span>);</div><div class="line">    Serial.println((<span class="keyword">float</span>)DHT11.temperature, <span class="number">2</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Temperature (oF): "</span>);</div><div class="line">    dataFile.println(Fahrenheit(DHT11.temperature), <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Temperature (oF): "</span>);</div><div class="line">    Serial.println(Fahrenheit(DHT11.temperature), <span class="number">2</span>);</div><div class="line">  </div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Temperature (K): "</span>);</div><div class="line">    dataFile.println(Kelvin(DHT11.temperature), <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Temperature (K): "</span>);</div><div class="line">    Serial.println(Kelvin(DHT11.temperature), <span class="number">2</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Dew Point (oC): "</span>);</div><div class="line">    dataFile.println(dewPoint(DHT11.temperature, DHT11.humidity));</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Dew Point (oC): "</span>);</div><div class="line">    Serial.println(dewPoint(DHT11.temperature, DHT11.humidity));</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Dew PointFast (oC): "</span>);</div><div class="line">    dataFile.println(dewPointFast(DHT11.temperature, DHT11.humidity)); </div><div class="line">    Serial.print(<span class="string">"Dew PointFast (oC): "</span>);</div><div class="line">    Serial.println(dewPointFast(DHT11.temperature, DHT11.humidity));</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>); </div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> </div><div class="line">  &#123;</div><div class="line">    Serial.println(<span class="string">"error opening datalog.txt"</span>);</div><div class="line">  &#125;  </div><div class="line">    delay(<span class="number">1800</span>);  </div><div class="line">    dataFile.close();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="Bluetooth-module"><a href="#Bluetooth-module" class="headerlink" title="Bluetooth module"></a>Bluetooth module</h4><p>Then the Bluetooth module is integrated in the circuit as shown in the figure<br><img src="/BTBACK.jpg" height="400" width="300" align="left"><br><img src="/BTFRONT.jpg" height="250" width="250" align="left"><br><img src="/SD+DHT112.png" alt="SD+DHT112"></p>
+<p>The Bluetooth module can be used to connect to the computer to measure the instant value.</p>
+<h3 id="Problem-issues-and-concerns-2"><a href="#Problem-issues-and-concerns-2" class="headerlink" title="Problem, issues and concerns"></a>Problem, issues and concerns</h3><ul>
+<li>Bluetooth module cannot work in AT command</li>
+<li>Gas sensor circuit’s build and programming</li>
+</ul>
+<h3 id="Tasks-for-next-week-2"><a href="#Tasks-for-next-week-2" class="headerlink" title="Tasks for next week"></a>Tasks for next week</h3><ul>
+<li>Configuration and testing of sensor</li>
+</ul>
+<h2 id="Fourth-week"><a href="#Fourth-week" class="headerlink" title="Fourth week"></a>Fourth week</h2><h3 id="Week’s-activities-3"><a href="#Week’s-activities-3" class="headerlink" title="Week’s activities"></a>Week’s activities</h3><ul>
+<li><h4 id="TGS813"><a href="#TGS813" class="headerlink" title="TGS813"></a>TGS813</h4>This week the group members focus on the methane gas sensor TGS 813<br>Datasheet: <a href="http://www.figarosensor.com/products/813pdf.pdf" target="_blank" rel="external">http://www.figarosensor.com/products/813pdf.pdf</a> </li>
+</ul>
+<p>The pin numbers are shown in the second figure following<br>Pin 1 and pin 6 are two terminals of one sensor<br>Pin 3 and pin 4 are two terminals of one sensor<br>Pin 2 and pin 5 are two terminals of one heating component (heater)</p>
+<p>The circuit is connected as the structure shown in the third figure<br>VRL is connected to the terminal A0 on the Arduino board to measure the change of the voltage.<br>The digital pin 8 of the Arduino is connected to the breadboard for the input voltage of the LED light. When the voltage measured is higher than 1V (this value can be change to adjust the sensitivity of the TGS 813) the digital pin 8 will be pulled high and the LED will light on.<br><img src="/TGS813FRONT.jpg" height="200" width="200" align="left"><br><img src="/TGS813BACK.jpg" height="200" width="200" align="left"><br><img src="/TGS813CIRCUIT.PNG" alt="TGS813CIRCUIT"></p>
+<h4 id="Project-code-of-TGS813"><a href="#Project-code-of-TGS813" class="headerlink" title="Project code of TGS813"></a>Project code of TGS813</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">float</span> temp; </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">Serial.begin(<span class="number">9600</span>); </div><div class="line">pinMode(<span class="number">8</span>,OUTPUT);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">int</span> V1 = analogRead(A0);      </div><div class="line">  <span class="keyword">float</span> vol = V1*(<span class="number">5.0</span> / <span class="number">1023.0</span>);     </div><div class="line">  <span class="keyword">if</span> (vol == temp)        </div><div class="line">  &#123;</div><div class="line">    temp = vol;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123; </div><div class="line">      Serial.print(vol);      </div><div class="line">      Serial.println(<span class="string">" V"</span>);      </div><div class="line">      temp = vol;</div><div class="line">      <span class="keyword">if</span>(temp&gt;<span class="number">1</span>)</div><div class="line">      &#123;</div><div class="line">        digitalWrite(<span class="number">8</span>,HIGH);</div><div class="line">        delay(<span class="number">500</span>);</div><div class="line">        digitalWrite(<span class="number">8</span>,LOW);</div><div class="line">       &#125;  </div><div class="line">      <span class="keyword">else</span></div><div class="line">      &#123;   </div><div class="line">      &#125;</div><div class="line">      delay(<span class="number">100</span>);     </div><div class="line">     &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="Project-code-of-storing-the-data-measured-by-TGS813-and-DHT11"><a href="#Project-code-of-storing-the-data-measured-by-TGS813-and-DHT11" class="headerlink" title="Project code of storing the data measured by TGS813 and DHT11"></a>Project code of storing the data measured by TGS813 and DHT11</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;dht11.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SPI.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SD.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> chipSelect = <span class="number">4</span>;</div><div class="line">dht11 DHT11;</div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> DHT11PIN 2</span></div><div class="line"></div><div class="line"><span class="keyword">int</span> a=<span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Fahrenheit</span><span class="params">(<span class="keyword">double</span> celsius)</span> </span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1.8</span> * celsius + <span class="number">32</span>;</div><div class="line">&#125;    </div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">Kelvin</span><span class="params">(<span class="keyword">double</span> celsius)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> celsius + <span class="number">273.15</span>;</div><div class="line">&#125;     </div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dewPoint</span><span class="params">(<span class="keyword">double</span> celsius, <span class="keyword">double</span> humidity)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">double</span> A0= <span class="number">373.15</span>/(<span class="number">273.15</span> + celsius);</div><div class="line">        <span class="keyword">double</span> SUM = <span class="number">-7.90298</span> * (A0<span class="number">-1</span>);</div><div class="line">        SUM += <span class="number">5.02808</span> * <span class="built_in">log10</span>(A0);</div><div class="line">        SUM += <span class="number">-1.3816e-7</span> * (<span class="built_in">pow</span>(<span class="number">10</span>, (<span class="number">11.344</span>*(<span class="number">1</span><span class="number">-1</span>/A0)))<span class="number">-1</span>) ;</div><div class="line">        SUM += <span class="number">8.1328e-3</span> * (<span class="built_in">pow</span>(<span class="number">10</span>,(<span class="number">-3.49149</span>*(A0<span class="number">-1</span>)))<span class="number">-1</span>) ;</div><div class="line">        SUM += <span class="built_in">log10</span>(<span class="number">1013.246</span>);</div><div class="line">        <span class="keyword">double</span> VP = <span class="built_in">pow</span>(<span class="number">10</span>, SUM<span class="number">-3</span>) * humidity;</div><div class="line">        <span class="keyword">double</span> T = <span class="built_in">log</span>(VP/<span class="number">0.61078</span>);   <span class="comment">// temp var</span></div><div class="line">        <span class="keyword">return</span> (<span class="number">241.88</span> * T) / (<span class="number">17.558</span>-T);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dewPointFast</span><span class="params">(<span class="keyword">double</span> celsius, <span class="keyword">double</span> humidity)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">double</span> a = <span class="number">17.271</span>;</div><div class="line">        <span class="keyword">double</span> b = <span class="number">237.7</span>;</div><div class="line">        <span class="keyword">double</span> temp = (a * celsius) / (b + celsius) + <span class="built_in">log</span>(humidity/<span class="number">100</span>);</div><div class="line">        <span class="keyword">double</span> Td = (b * temp) / (a - temp);</div><div class="line">        <span class="keyword">return</span> Td;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  Serial.begin(<span class="number">9600</span>);  </div><div class="line">  Serial.print(<span class="string">"Initializing SD card..."</span>);</div><div class="line">  pinMode(<span class="number">10</span>, OUTPUT);</div><div class="line">  pinMode(<span class="number">8</span>,OUTPUT);</div><div class="line">  </div><div class="line">  </div><div class="line">  <span class="keyword">if</span> (!SD.begin(chipSelect)) &#123;  </div><div class="line">    Serial.println(<span class="string">"Card failed, or not present"</span>);</div><div class="line">    <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line">  Serial.println(<span class="string">"card initialized."</span>);  </div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> aa=<span class="number">0</span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">File dataFile = SD.open(<span class="string">"datalog.txt"</span>, FILE_WRITE);  </div><div class="line">  <span class="keyword">int</span> V1 = analogRead(A0);      </div><div class="line"></div><div class="line">  <span class="keyword">float</span> vol = V1*(<span class="number">5.0</span> / <span class="number">1023.0</span>);</div><div class="line">  <span class="keyword">float</span> temp;</div><div class="line">  <span class="keyword">if</span> (vol == temp)        </div><div class="line">  &#123;</div><div class="line">    temp = vol;           </div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span></div><div class="line">  &#123; </div><div class="line">   <span class="comment">//Serial.print(vol);      </span></div><div class="line">   <span class="comment">//Serial.println(" V");      </span></div><div class="line">   temp = vol;</div><div class="line">  </div><div class="line">     <span class="keyword">if</span>(temp&gt;<span class="number">1</span>)</div><div class="line">     &#123;</div><div class="line">      </div><div class="line">        digitalWrite(<span class="number">8</span>,HIGH);</div><div class="line">        <span class="keyword">if</span>(aa==<span class="number">3</span>)</div><div class="line">        &#123;</div><div class="line">        dataFile.print(<span class="string">"Gas detection"</span>);</div><div class="line">        dataFile.println(<span class="string">"Yes"</span>);</div><div class="line">        Serial.print(<span class="string">"Gas detection:"</span>);</div><div class="line">        Serial.println(<span class="string">"Yes"</span>);</div><div class="line">        </div><div class="line">        &#125;</div><div class="line">        delay(<span class="number">500</span>);</div><div class="line">       digitalWrite(<span class="number">8</span>,LOW);</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">else</span></div><div class="line">       &#123; </div><div class="line">        <span class="keyword">if</span>(aa==<span class="number">3</span>)&#123;</div><div class="line">        dataFile.print(<span class="string">"Gas detection"</span>);</div><div class="line">        dataFile.println(<span class="string">"Yes"</span>);</div><div class="line">        Serial.print(<span class="string">"Gas detection:"</span>);</div><div class="line">        Serial.println(<span class="string">"No"</span>);</div><div class="line">       </div><div class="line">        &#125;</div><div class="line">        &#125;  </div><div class="line">  &#125;</div><div class="line"></div><div class="line">       </div><div class="line">  <span class="keyword">int</span> chk = DHT11.read(DHT11PIN);</div><div class="line"></div><div class="line"></div><div class="line">aa=aa+<span class="number">1</span>;</div><div class="line">dataFile.close();</div><div class="line">  </div><div class="line"> <span class="keyword">if</span>(aa==<span class="number">4</span>)&#123;</div><div class="line">  File dataFile = SD.open(<span class="string">"datalog.txt"</span>, FILE_WRITE);  </div><div class="line">  <span class="keyword">if</span> (dataFile) </div><div class="line">  &#123;</div><div class="line">    </div><div class="line">    <span class="comment">//unsigned long T =millis ()/1000.0;</span></div><div class="line">    <span class="keyword">float</span> T=millis()/<span class="number">1000.0</span>;</div><div class="line">    dataFile.print(<span class="string">"Time: "</span>); </div><div class="line">    dataFile.print(T);</div><div class="line">    dataFile.println(<span class="string">"ms"</span>);</div><div class="line">    Serial.print(<span class="string">"Time: "</span>);</div><div class="line">    Serial.print(T);</div><div class="line">    Serial.println(<span class="string">"ms"</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Humidity (%): "</span>);</div><div class="line">    dataFile.println((<span class="keyword">float</span>)DHT11.humidity, <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Humidity (%): "</span>);</div><div class="line">    Serial.println((<span class="keyword">float</span>)DHT11.humidity, <span class="number">2</span>);</div><div class="line"></div><div class="line">    dataFile.println(<span class="string">"Temperature (oC): "</span>);</div><div class="line">    dataFile.println((<span class="keyword">float</span>)DHT11.temperature, <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Temperature (oC): "</span>);</div><div class="line">    Serial.println((<span class="keyword">float</span>)DHT11.temperature, <span class="number">2</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Temperature (oF): "</span>);</div><div class="line">    dataFile.println(Fahrenheit(DHT11.temperature), <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Temperature (oF): "</span>);</div><div class="line">    Serial.println(Fahrenheit(DHT11.temperature), <span class="number">2</span>);</div><div class="line">  </div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Temperature (K): "</span>);</div><div class="line">    dataFile.println(Kelvin(DHT11.temperature), <span class="number">2</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Temperature (K): "</span>);</div><div class="line">    Serial.println(Kelvin(DHT11.temperature), <span class="number">2</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Dew Point (oC): "</span>);</div><div class="line">    dataFile.println(dewPoint(DHT11.temperature, DHT11.humidity));</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"Dew Point (oC): "</span>);</div><div class="line">    Serial.println(dewPoint(DHT11.temperature, DHT11.humidity));</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"Dew PointFast (oC): "</span>);</div><div class="line">    dataFile.println(dewPointFast(DHT11.temperature, DHT11.humidity)); </div><div class="line">    Serial.print(<span class="string">"Dew PointFast (oC): "</span>);</div><div class="line">    Serial.println(dewPointFast(DHT11.temperature, DHT11.humidity));</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    Serial.print(<span class="string">"\n"</span>);</div><div class="line">    </div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>);</div><div class="line">    dataFile.println(<span class="string">"\n"</span>); </div><div class="line">    aa=<span class="number">0</span>;&#125;</div><div class="line">    <span class="keyword">else</span> </div><div class="line">  &#123;</div><div class="line">    Serial.println(<span class="string">"error opening datalog.txt"</span>);</div><div class="line">  &#125; </div><div class="line">  </div><div class="line">    </div><div class="line">    delay(<span class="number">1800</span>);</div><div class="line">  </div><div class="line">    dataFile.close();</div><div class="line"></div><div class="line">  &#125;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Problem-issues-and-concerns-3"><a href="#Problem-issues-and-concerns-3" class="headerlink" title="Problem, issues and concerns"></a>Problem, issues and concerns</h3><p>The connection between two parts by Bluetooth</p>
+<h3 id="Tasks-for-next-week-3"><a href="#Tasks-for-next-week-3" class="headerlink" title="Tasks for next week"></a>Tasks for next week</h3><ol>
+<li>Configuring robot and communication between two parts (robot and station)</li>
+<li>Blog</li>
+</ol>
+<h2 id="Fifth-week"><a href="#Fifth-week" class="headerlink" title="Fifth week"></a>Fifth week</h2><h3 id="Week’s-activities-4"><a href="#Week’s-activities-4" class="headerlink" title="Week’s activities"></a>Week’s activities</h3><p>The car was programmed to send the weather station to the specific place<br>The car has two mode:</p>
+<ol>
+<li>Go and back with specific route</li>
+<li>Go following a line</li>
+</ol>
+<h4 id="Project-code-for-mBot-Vehicle"><a href="#Project-code-for-mBot-Vehicle" class="headerlink" title="Project code for mBot (Vehicle)"></a>Project code for mBot (Vehicle)</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Arduino.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;Wire.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SoftwareSerial.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;MeMCore.h&gt;</span></span></div><div class="line"><span class="function">MeDCMotor <span class="title">motor_9</span><span class="params">(<span class="number">9</span>)</span></span>;</div><div class="line"><span class="function">MeDCMotor <span class="title">motor_10</span><span class="params">(<span class="number">10</span>)</span></span>;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">move</span><span class="params">(<span class="keyword">int</span> direction, <span class="keyword">int</span> speed)</span></span></div><div class="line">&#123;</div><div class="line">      <span class="keyword">int</span> leftSpeed = <span class="number">0</span>;</div><div class="line">      <span class="keyword">int</span> rightSpeed = <span class="number">0</span>;</div><div class="line">      <span class="keyword">if</span>(direction == <span class="number">1</span>)&#123;</div><div class="line">        	leftSpeed = speed;</div><div class="line">        	rightSpeed = speed;</div><div class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(direction == <span class="number">2</span>)&#123;</div><div class="line">        	leftSpeed = -speed;</div><div class="line">        	rightSpeed = -speed;</div><div class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(direction == <span class="number">3</span>)&#123;</div><div class="line">        	leftSpeed = -speed;</div><div class="line">        	rightSpeed = speed;</div><div class="line">      &#125;<span class="keyword">else</span> <span class="keyword">if</span>(direction == <span class="number">4</span>)&#123;</div><div class="line">        	leftSpeed = speed;</div><div class="line">        	rightSpeed = -speed;</div><div class="line">      &#125;</div><div class="line">      motor_9.run((<span class="number">9</span>)==M1?-(leftSpeed):(leftSpeed));</div><div class="line">      motor_10.run((<span class="number">10</span>)==M1?-(rightSpeed):(rightSpeed));</div><div class="line">&#125;</div><div class="line"><span class="keyword">double</span> angle_rad = PI/<span class="number">180.0</span>;</div><div class="line"><span class="keyword">double</span> angle_deg = <span class="number">180.0</span>/PI;</div><div class="line"><span class="keyword">double</span> t;</div><div class="line"><span class="keyword">double</span> turn;</div><div class="line"><span class="function">MeRGBLed <span class="title">rgbled_7</span><span class="params">(<span class="number">7</span>, <span class="number">7</span>==<span class="number">7</span>?<span class="number">2</span>:<span class="number">4</span>)</span></span>;</div><div class="line">MeBuzzer buzzer;</div><div class="line"><span class="function">MeUltrasonicSensor <span class="title">ultrasonic_3</span><span class="params">(<span class="number">3</span>)</span></span>;</div><div class="line"><span class="function">MeLineFollower <span class="title">linefollower_2</span><span class="params">(<span class="number">2</span>)</span></span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span></span>&#123;</div><div class="line">    pinMode(A7,INPUT);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span>&#123;</div><div class="line">    rgbled_7.setColor(<span class="number">0</span>,<span class="number">20</span>,<span class="number">0</span>,<span class="number">20</span>);</div><div class="line">    rgbled_7.show();</div><div class="line">    _delay(<span class="number">0.8</span>);</div><div class="line">    rgbled_7.setColor(<span class="number">0</span>,<span class="number">0</span>,<span class="number">20</span>,<span class="number">20</span>);</div><div class="line">    rgbled_7.show();</div><div class="line">    _delay(<span class="number">0.8</span>);</div><div class="line">    rgbled_7.setColor(<span class="number">0</span>,<span class="number">20</span>,<span class="number">20</span>,<span class="number">20</span>);</div><div class="line">    rgbled_7.show();</div><div class="line">    <span class="keyword">while</span>(!((<span class="number">0</span>^(analogRead(A7)&gt;<span class="number">10</span>?<span class="number">0</span>:<span class="number">1</span>))))</div><div class="line">    &#123;</div><div class="line">        _loop();</div><div class="line">    &#125;</div><div class="line">    buzzer.tone(<span class="number">262</span>, <span class="number">1000</span>);</div><div class="line">    delay(<span class="number">20</span>);</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> __i__=<span class="number">0</span>;__i__&lt;<span class="number">5</span>;++__i__)</div><div class="line">    &#123;</div><div class="line">        _delay(<span class="number">3</span>);</div><div class="line">        t = <span class="number">0</span>;</div><div class="line">        turn = <span class="number">0</span>;</div><div class="line">        rgbled_7.setColor(<span class="number">0</span>,<span class="number">0</span>,<span class="number">20</span>,<span class="number">20</span>);</div><div class="line">        rgbled_7.show();</div><div class="line">        <span class="keyword">while</span>(!((ultrasonic_3.distanceCm()) &lt; (<span class="number">15</span>)))</div><div class="line">        &#123;</div><div class="line">            _loop();</div><div class="line">            move(<span class="number">1</span>,<span class="number">150</span>);</div><div class="line">            _delay(<span class="number">0.1</span>);</div><div class="line">            t += <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        move(<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">        rgbled_7.setColor(<span class="number">0</span>,<span class="number">20</span>,<span class="number">20</span>,<span class="number">0</span>);</div><div class="line">        rgbled_7.show();</div><div class="line">        buzzer.tone(<span class="number">262</span>, <span class="number">1000</span>);</div><div class="line">        delay(<span class="number">20</span>);</div><div class="line">        _delay(<span class="number">5</span>);</div><div class="line">        buzzer.tone(<span class="number">262</span>, <span class="number">1000</span>);</div><div class="line">        delay(<span class="number">20</span>);</div><div class="line">        <span class="keyword">while</span>(!((turn) &gt; (<span class="number">8</span>)))</div><div class="line">        &#123;</div><div class="line">            _loop();</div><div class="line">            move(<span class="number">4</span>,<span class="number">143</span>);</div><div class="line">            _delay(<span class="number">0.1</span>);</div><div class="line">            turn += <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span>(!((t) &lt; (<span class="number">0</span>  )))</div><div class="line">        &#123;</div><div class="line">            _loop();</div><div class="line">            move(<span class="number">1</span>,<span class="number">150</span>);</div><div class="line">            _delay(<span class="number">0.1</span>);</div><div class="line">            t += <span class="number">-1</span>;</div><div class="line">        &#125;</div><div class="line">        move(<span class="number">1</span>,<span class="number">0</span>);</div><div class="line">        rgbled_7.setColor(<span class="number">0</span>,<span class="number">0</span>,<span class="number">20</span>,<span class="number">20</span>);</div><div class="line">        rgbled_7.show();</div><div class="line">        buzzer.tone(<span class="number">110</span>, <span class="number">500</span>);</div><div class="line">        delay(<span class="number">20</span>);</div><div class="line">        buzzer.tone(<span class="number">262</span>, <span class="number">500</span>);</div><div class="line">        delay(<span class="number">20</span>);</div><div class="line">        buzzer.tone(<span class="number">165</span>, <span class="number">500</span>);</div><div class="line">        delay(<span class="number">20</span>);</div><div class="line">    &#125;</div><div class="line">    rgbled_7.setColor(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">30</span>);</div><div class="line">    rgbled_7.show();</div><div class="line">    <span class="keyword">while</span>(!((<span class="number">1</span>^(analogRead(A7)&gt;<span class="number">10</span>?<span class="number">0</span>:<span class="number">1</span>))))</div><div class="line">    &#123;</div><div class="line">        _loop();</div><div class="line">    &#125;</div><div class="line">    buzzer.tone(<span class="number">87</span>, <span class="number">500</span>);</div><div class="line">    delay(<span class="number">20</span>);</div><div class="line">    buzzer.tone(<span class="number">87</span>, <span class="number">500</span>);</div><div class="line">    delay(<span class="number">20</span>);</div><div class="line">    <span class="keyword">while</span>(!((<span class="number">0</span>^(analogRead(A7)&gt;<span class="number">10</span>?<span class="number">0</span>:<span class="number">1</span>))))</div><div class="line">    &#123;</div><div class="line">        _loop();</div><div class="line">        rgbled_7.setColor(<span class="number">0</span>,<span class="number">0</span>,<span class="number">30</span>,<span class="number">0</span>);</div><div class="line">        rgbled_7.show();</div><div class="line">        <span class="keyword">if</span>((<span class="literal">true</span>&amp;&amp;(<span class="number">1</span>?(linefollower_2.readSensors()&amp;<span class="number">2</span>):!(linefollower_2.readSensors()&amp;<span class="number">2</span>))))&#123;</div><div class="line">            move(<span class="number">4</span>,<span class="number">100</span>);</div><div class="line">            _delay(<span class="number">0.1</span>);</div><div class="line">        &#125;<span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">            _delay(<span class="number">0.1</span>);</div><div class="line">            move(<span class="number">3</span>,<span class="number">100</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    _loop();</div><div class="line">&#125;</div><div class="line"><span class="keyword">void</span> _delay(<span class="keyword">float</span> seconds)&#123;</div><div class="line">    <span class="keyword">long</span> endTime = millis() + seconds * <span class="number">1000</span>;</div><div class="line">    <span class="keyword">while</span>(millis() &lt; endTime)_loop();</div><div class="line">&#125;</div><div class="line"><span class="keyword">void</span> _loop()&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="AT-mode-of-Bluetooth-module"><a href="#AT-mode-of-Bluetooth-module" class="headerlink" title="AT mode of Bluetooth module"></a>AT mode of Bluetooth module</h4><p>Before the Bluetooth module begin working, push the button switch and pull pin 34 voltage high by wiring to Vcc. Then the Bluetooth module enter the AT command mode.<br>The light should be flashed slowly.<br>The pin 34 should be voltage high all the time to ensure Bluetooth is in “full” AT mode. If the pin 34 return the voltage low after Bluetooth is working, it will enter a mode named “mini” AT mode, in which some commands will fail.</p>
+<h4 id="Project-code-for-AT-mode"><a href="#Project-code-for-AT-mode" class="headerlink" title="Project code for AT mode"></a>Project code for AT mode</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Basic Bluetooth sketch HC-05_AT_MODE_01</span></div><div class="line"><span class="comment">// Communicate with a HC-05 using the serial monitor</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// The HC-05 defaults to communication mode when first powered on you will need to manually enter AT mode</span></div><div class="line"><span class="comment">// The default baud rate for AT mode is 38400</span></div><div class="line"><span class="comment">// See www.martyncurrey.com for details</span></div><div class="line"><span class="comment">//</span></div><div class="line"> </div><div class="line"> </div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;SoftwareSerial.h&gt;</span></span></div><div class="line"><span class="function">SoftwareSerial <span class="title">BTserial</span><span class="params">(<span class="number">6</span>,<span class="number">7</span>)</span></span>; <span class="comment">// RX | TX</span></div><div class="line"><span class="comment">// Connect the HC-05 TX to Arduino pin 0 RX. </span></div><div class="line"><span class="comment">// Connect the HC-05 RX to Arduino pin 1 TX through a voltage divider.</span></div><div class="line"><span class="comment">// </span></div><div class="line"> </div><div class="line"><span class="keyword">char</span> c = <span class="string">' '</span>;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">setup</span><span class="params">()</span> </span></div><div class="line">&#123;</div><div class="line">    Serial.begin(<span class="number">9600</span>);</div><div class="line">    Serial.println(<span class="string">"Arduino is ready"</span>);</div><div class="line">    Serial.println(<span class="string">"Remember to select Both NL &amp; CR in the serial monitor"</span>);</div><div class="line"> </div><div class="line">    <span class="comment">// HC-05 default serial speed for AT mode is 38400</span></div><div class="line">    BTserial.begin(<span class="number">38400</span>);  </div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">loop</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"> </div><div class="line">    <span class="comment">// Keep reading from HC-05 and send to Arduino Serial Monitor</span></div><div class="line">    <span class="keyword">if</span> (BTserial.available())</div><div class="line">    &#123;  </div><div class="line">        c = BTserial.read();</div><div class="line">        Serial.write(c);</div><div class="line">    &#125;</div><div class="line"> </div><div class="line">    <span class="comment">// Keep reading from Arduino Serial Monitor and send to HC-05</span></div><div class="line">    <span class="keyword">if</span> (Serial.available())</div><div class="line">    &#123;</div><div class="line">        c =  Serial.read();</div><div class="line">        BTserial.write(c);  </div><div class="line">    &#125;</div><div class="line"> </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>For the Bluetooth on the vehicle the group cannot enter the AT mode until the end of the lab day, so it’s a disadvantage that the weather station and vehicle cannot synchronize.<br>Then the vehicle and weather station can be considered as two individual part except the power supply.  </p>
+<p>Reference:</p>
+<ol>
+<li><a href="http://www.martyncurrey.com/" target="_blank" rel="external">http://www.martyncurrey.com/</a></li>
+<li><a href="http://www.martyncurrey.com/arduino-with-hc-05-bluetooth-module-at-mode/" target="_blank" rel="external">http://www.martyncurrey.com/arduino-with-hc-05-bluetooth-module-at-mode/</a></li>
+</ol>
+<h3 id="Problem-issues-and-concerns-4"><a href="#Problem-issues-and-concerns-4" class="headerlink" title="Problem, issues and concerns"></a>Problem, issues and concerns</h3><ul>
+<li>The vehicle cannot enter the AT mode due to its special system although it is based on Arduino.</li>
+</ul>
+<h3 id="Tasks-for-next-week-4"><a href="#Tasks-for-next-week-4" class="headerlink" title="Tasks for next week"></a>Tasks for next week</h3><ol>
+<li>Blog</li>
+<li>Poster</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/project/" rel="tag"># project</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/11/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/23/ELEC211/" rel="prev" title="ELEC211">
+                ELEC211 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+          
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://eeeconference.com/img/logo.svg"
+               alt="Yan Fang" />
+          <p class="site-author-name" itemprop="name">Yan Fang</p>
+          <p class="site-description motion-element" itemprop="description">The details of the process of the Year 2 project</p>
+        </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">posts</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#First-week"><span class="nav-number">2.</span> <span class="nav-text">First week</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Week’s-activities"><span class="nav-number">2.1.</span> <span class="nav-text">Week’s activities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-issues-and-concerns"><span class="nav-number">2.2.</span> <span class="nav-text">Problem, issues and concerns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks-for-next-week"><span class="nav-number">2.3.</span> <span class="nav-text">Tasks for next week</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Second-week"><span class="nav-number">3.</span> <span class="nav-text">Second week</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Week’s-activities-1"><span class="nav-number">3.1.</span> <span class="nav-text">Week’s activities</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-issues-and-concerns-1"><span class="nav-number">3.2.</span> <span class="nav-text">Problem, issues and concerns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks-for-next-week-1"><span class="nav-number">3.3.</span> <span class="nav-text">Tasks for next week</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Third-week"><span class="nav-number">4.</span> <span class="nav-text">Third week</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Week’s-activities-2"><span class="nav-number">4.1.</span> <span class="nav-text">Week’s activities</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Project-code-of-DHT11"><span class="nav-number">4.1.1.</span> <span class="nav-text">Project code of DHT11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Project-code-for-testing-the-MicroSD-Card-Module"><span class="nav-number">4.1.2.</span> <span class="nav-text">Project code for testing the MicroSD Card Module</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Project-code-for-storing-the-data-measured-by-DHT11"><span class="nav-number">4.1.3.</span> <span class="nav-text">Project code for storing the data measured by DHT11</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Bluetooth-module"><span class="nav-number">4.1.4.</span> <span class="nav-text">Bluetooth module</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-issues-and-concerns-2"><span class="nav-number">4.2.</span> <span class="nav-text">Problem, issues and concerns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks-for-next-week-2"><span class="nav-number">4.3.</span> <span class="nav-text">Tasks for next week</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fourth-week"><span class="nav-number">5.</span> <span class="nav-text">Fourth week</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Week’s-activities-3"><span class="nav-number">5.1.</span> <span class="nav-text">Week’s activities</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TGS813"><span class="nav-number">5.1.1.</span> <span class="nav-text">TGS813</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Project-code-of-TGS813"><span class="nav-number">5.1.2.</span> <span class="nav-text">Project code of TGS813</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Project-code-of-storing-the-data-measured-by-TGS813-and-DHT11"><span class="nav-number">5.1.3.</span> <span class="nav-text">Project code of storing the data measured by TGS813 and DHT11</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-issues-and-concerns-3"><span class="nav-number">5.2.</span> <span class="nav-text">Problem, issues and concerns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks-for-next-week-3"><span class="nav-number">5.3.</span> <span class="nav-text">Tasks for next week</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fifth-week"><span class="nav-number">6.</span> <span class="nav-text">Fifth week</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Week’s-activities-4"><span class="nav-number">6.1.</span> <span class="nav-text">Week’s activities</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Project-code-for-mBot-Vehicle"><span class="nav-number">6.1.1.</span> <span class="nav-text">Project code for mBot (Vehicle)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AT-mode-of-Bluetooth-module"><span class="nav-number">6.1.2.</span> <span class="nav-text">AT mode of Bluetooth module</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Project-code-for-AT-mode"><span class="nav-number">6.1.3.</span> <span class="nav-text">Project code for AT mode</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-issues-and-concerns-4"><span class="nav-number">6.2.</span> <span class="nav-text">Problem, issues and concerns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tasks-for-next-week-4"><span class="nav-number">6.3.</span> <span class="nav-text">Tasks for next week</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yan Fang</span>
+</div>
+
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
